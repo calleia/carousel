@@ -12,6 +12,7 @@
 		FB408EB62010CDF8007F860E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB408EB42010CDF8007F860E /* Main.storyboard */; };
 		FB408EB82010CDF8007F860E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB408EB72010CDF8007F860E /* Assets.xcassets */; };
 		FB408EBB2010CDF8007F860E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB408EB92010CDF8007F860E /* LaunchScreen.storyboard */; };
+		FB408EC32010D082007F860E /* InfiniteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408EC22010D082007F860E /* InfiniteCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FB408EB72010CDF8007F860E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB408EBA2010CDF8007F860E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB408EBC2010CDF8007F860E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB408EC22010D082007F860E /* InfiniteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				FB408EB02010CDF8007F860E /* AppDelegate.swift */,
+				FB408EC22010D082007F860E /* InfiniteCollectionViewCell.swift */,
 				FB408EB22010CDF8007F860E /* ViewController.swift */,
 				FB408EB42010CDF8007F860E /* Main.storyboard */,
 				FB408EB72010CDF8007F860E /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB408EC32010D082007F860E /* InfiniteCollectionViewCell.swift in Sources */,
 				FB408EB32010CDF8007F860E /* ViewController.swift in Sources */,
 				FB408EB12010CDF8007F860E /* AppDelegate.swift in Sources */,
 			);
