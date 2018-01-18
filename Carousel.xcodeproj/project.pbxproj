@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0859452010DEE700DC618A /* InfiniteCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0859442010DEE700DC618A /* InfiniteCollectionViewFlowLayout.swift */; };
 		FB408EB12010CDF8007F860E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408EB02010CDF8007F860E /* AppDelegate.swift */; };
 		FB408EB32010CDF8007F860E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408EB22010CDF8007F860E /* ViewController.swift */; };
 		FB408EB62010CDF8007F860E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB408EB42010CDF8007F860E /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0859442010DEE700DC618A /* InfiniteCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		FB408EAD2010CDF8007F860E /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB408EB02010CDF8007F860E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB408EB22010CDF8007F860E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				FB408EB02010CDF8007F860E /* AppDelegate.swift */,
 				FB408EC22010D082007F860E /* InfiniteCollectionViewCell.swift */,
+				FB0859442010DEE700DC618A /* InfiniteCollectionViewFlowLayout.swift */,
 				FB408EB22010CDF8007F860E /* ViewController.swift */,
 				FB408EB42010CDF8007F860E /* Main.storyboard */,
 				FB408EB72010CDF8007F860E /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0859452010DEE700DC618A /* InfiniteCollectionViewFlowLayout.swift in Sources */,
 				FB408EC32010D082007F860E /* InfiniteCollectionViewCell.swift in Sources */,
 				FB408EB32010CDF8007F860E /* ViewController.swift in Sources */,
 				FB408EB12010CDF8007F860E /* AppDelegate.swift in Sources */,
