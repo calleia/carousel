@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var carouselViews = [Any]()
+    var currentCarouselView = Int(0)
     
     let reuseIdentifier = "InfiniteCollectionViewCell"
     
@@ -50,5 +51,17 @@ extension ViewController: UICollectionViewDataSource {
         cell.label.text = String(describing: title)
         
         return cell
+    }
+}
+
+extension ViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layout = self.collectionView?.collectionViewLayout as! InfiniteCollectionViewFlowLayout
+        
+        let cardSize = layout.itemSize.height + layout.minimumLineSpacing
+        let offset = scrollView.contentOffset.y
+        
+        currentCarouselView = Int(floor((offset - cardSize / 2) / cardSize) + 1)
     }
 }
