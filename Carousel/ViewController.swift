@@ -27,6 +27,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set Carousel's initial position
+        let indexPath = IndexPath(row: carouselViews.count, section: 0)
+        self.collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
     }
 }
 
@@ -40,14 +44,15 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return carouselViews.count
+        // Multiplication by 3 needed to simulate the infinite scroll effect
+        return carouselViews.count * 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! InfiniteCollectionViewCell
         
-        let title = carouselViews[indexPath.row]
+        let title = carouselViews[indexPath.row % carouselViews.count]
         cell.label.text = String(describing: title)
         
         return cell
@@ -63,5 +68,17 @@ extension ViewController: UIScrollViewDelegate {
         let offset = scrollView.contentOffset.y
         
         currentCarouselView = Int(floor((offset - cardSize / 2) / cardSize) + 1)
+        
+        if (currentCarouselView / carouselViews.count) != 1 {
+
+            if currentCarouselView < carouselViews.count {
+                let indexPath = IndexPath(row: currentCarouselView + carouselViews.count, section: 0)
+                self.collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
+            }
+            else if currentCarouselView >= carouselViews.count * 2 {
+                let indexPath = IndexPath(row: currentCarouselView - carouselViews.count, section: 0)
+                self.collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
+            }
+        }
     }
 }
